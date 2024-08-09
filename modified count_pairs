@@ -1,0 +1,19 @@
+"""Count the number of pairs of list indices i < j such that data[i] - data[j] = target. Time complexity: O(n)."""
+    counter = {}
+    result = 0
+ 
+    for num in data:
+        # Instead of num - target, we should check if num + target is in the counter
+        complement = num + target
+        
+        # If num + target has been seen before, increment the result
+        if complement in counter:
+            result += counter[complement]
+        
+        # Add or update the current number in the counter dictionary
+        if num in counter:
+            counter[num] += 1
+        else:
+            counter[num] = 1
+ 
+    return result
