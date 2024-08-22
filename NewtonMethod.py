@@ -9,14 +9,14 @@ def Newton_Method(p0,Tol=1e-5,N0=100):
         i+=1
         p0=p
     return "msg fail"
-#(a)
-def f(x):
-    return pow(x,3)-2*pow(x,2)-5
+# #(a)
+# def f(x):
+#     return pow(x,3)-2*pow(x,2)-5
 
-def fd(x):
-    return 3*pow(x,2)-4*x
+# def fd(x):
+#     return 3*pow(x,2)-4*x
 
-print(Newton_Method(3))  # ===> 2.690647448028614
+# print(Newton_Method(3))  # ===> 2.690647448028614
 
 # #(b)
 # def f(x):
@@ -37,3 +37,11 @@ print(Newton_Method(3))  # ===> 2.690647448028614
 
 # print(Newton_Method(1)) # ===> 0.6411992303081061
 
+def f(x):
+    return 230*(x**4)+18*(x**3)+9*(x**2)-221*x-9
+
+def fd(x):
+    return 920*(x**3)+54*(x**2)+18*x-221
+
+print(Newton_Method(-0.5)) # ===> -0.04065928831575899
+print(Newton_Method(0.5)) # ===> -0.040659288315758865
